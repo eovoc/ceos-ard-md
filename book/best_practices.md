@@ -615,8 +615,9 @@ Collection metadata records in ISO19115-3 {cite}`iso19115_3` format should adver
 
 
 Example files:
-    - [novasar_l2ard_hh_hv (short)](./examples/iso19115-3/novasar_l2ard_hh_hv_1.xml)
-    - [novasar_l2ard_hh_hv (long)](./examples/iso19115-3/novasar_l2ard_hh_hv_2.xml)
+
+    - [novasar_l2ard_hh_hv.xml (short)](./examples/iso19115-3/novasar_l2ard_hh_hv_1.xml)
+    - [novasar_l2ard_hh_hv.xml (long)](./examples/iso19115-3/novasar_l2ard_hh_hv_2.xml)
 
 
 ### ISO19115-4 Encoding
@@ -759,7 +760,7 @@ Collection metadata records in ISO19115-4 {cite}`iso19115_4` format should adver
 `````
 
 Example files:
-    - [novasar_l2ard_hh_hv](./examples/iso19115-4/novasar_l2ard_hh_hv.json)
+    - [novasar_l2ard_hh_hv.json](./examples/iso19115-4/novasar_l2ard_hh_hv.json)
 
 ### STAC Encoding
 
@@ -860,7 +861,7 @@ Collection metadata records in STAC {cite}`stac` format should advertise conform
 `````
 
 Example files:
-    - [ENMAP_HSI_L2A](./examples/stac/ENMAP_HSI_L2A.json)
+    - [ENMAP_HSI_L2A.json](./examples/stac/ENMAP_HSI_L2A.json)
 
 ### DIF10 Encoding
 
