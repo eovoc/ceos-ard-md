@@ -2,7 +2,7 @@
 
 ## Community Approaches
 
-The INSPIRE, DGIWG and Linked Data communities (W3C DCAT) have adopted well-documented approaches that can be applied in the CEOS context.
+The INSPIRE, DGIWG and Linked Data communities (W3C DCAT) have adopted well-documented approaches for expressing conformance of data products with quality related data product specifications.  These can be applied in the CEOS context to express compliance with CEOS-ARD Product Family Specifications {cite}`CEOS_ARD` or other CEOS Specifications (e.g. Maturity Matrix conformance {cite}`ceos_mm`).
 
 Section 3.1.4 "Data quality info" of the INSPIRE Metadata Technical Guidance {cite}`inspire_metadata_guidance` provides specific 
 guidelines on how to include a statement on the degree of conformity with the specifications against which its conformity has been 
@@ -30,7 +30,7 @@ is recommended to include information on the conformance with the individual con
 `````
 This approach is recommended by {cite}`inspire_dataspec_oi`.
 
-Alternatively, or in addition, a simple keyword based identification of EOS-ARD Product Families can be adoped as well, using codelist and codelist values. This approach is covered in a separate chapter.
+Alternatively, or in addition, a simple keyword-based identification of EOS-ARD Product Families can be adoped as well, using codelist and codelist values. This approach is described as well.
 
 
 ## Metadata Model
@@ -84,8 +84,16 @@ It should be noted that the above identifiers are not the actual download URL wh
 The current PFS specifications do currently not define conformance classes.  These may be added at a later stage and will allow to express partial compliance.
 
 ```{warning}
-Examples of URI for compliance classes to be added... .
+URI and meaning of compliance classes have still to be defined.  Below are examples only...
 ```
+
+| Specification Title | Version |  Conformance Class  | Conformance Class (URI)
+|------|-----|-----|-----|
+| CEOS-ARD Product Family Specification: Surface Reflectance          | 5.0   | Threshold | http://ceos.org/spec/ard/PFS/SR/5.0/conf/threshold  |
+| CEOS-ARD Product Family Specification: Surface Reflectance          | 5.0   | Threshold | http://ceos.org/spec/ard/PFS/SR/5.0/conf/threshold_geometric_correction  |
+| CEOS-ARD Product Family Specification: Surface Reflectance          | 5.0   | Threshold | http://ceos.org/spec/ard/PFS/SR/5.0/conf/target_geometric_correction  |
+| CEOS-ARD Product Family Specification: Normalised Radar Backscatter | 5.5   | Threshold | http://ceos.org/spec/ard/PFS/NRB/5.5/conf/threshold | 
+
 
 `````{admonition} CEOS-ARDMD-REC-0020 [Recommendation]
 :class: tip
@@ -318,6 +326,10 @@ Data quality section as proposed in the INSPIRE Metadata Technical Guidance {cit
 Collection metadata records in ISO19139(-2) format should advertise conformance status with respect to CEOS-ARD PFS using a citation element with reference to the document URI or conformance class URI as shown in example 1.2. 
 `````
 
+
+> **Example: 1.3**  
+>  Documenting conformance with specification ISO19139 metadata (with keywords).
+
 ```xml
 <gmd:descriptiveKeywords xmlns:gmx="http://www.isotc211.org/2005/gmx">
 	<gmd:MD_Keywords>
@@ -432,8 +444,179 @@ TBD:
 Collection metadata records in ISO19115-3 {cite}`iso19115_3` format should advertise conformance status with respect to CEOS-ARD PFS using a citation element with reference to the document URI or conformance class URI as shown in example 1.2. 
 `````
 
+
+
+> **Example: 2.2**  
+>  Documenting conformance with specification in ISO19115-3 metadata with additional information about evaluation method, self assessment, peer review etc.
+
+```xml
+<mdb:dataQualityInfo>
+		<mdq:DQ_DataQuality>
+			<mdq:scope>
+				<mcc:MD_Scope>
+					<mcc:level>
+						<mcc:MD_ScopeCode codeList="http://www.tc211.org/ISO19139/resources/codeList.xml#MD_ScopeCode" codeListValue="series"/>
+					</mcc:level>
+				</mcc:MD_Scope>
+			</mdq:scope>
+			<mdq:report>
+				<mdq:DQ_ConceptualConsistency>
+					<mdq:measure>
+						<mdq:DQ_MeasureReference>
+							<mdq:measureIdentification>
+								<mcc:MD_Identifier>
+									<mcc:authority>
+										<cit:CI_Citation>
+											<cit:title>
+												<gco:CharacterString>International Organization for Standardization</gco:CharacterString>
+											</cit:title>
+											<cit:alternateTitle>
+												<gco:CharacterString>ISO</gco:CharacterString>
+											</cit:alternateTitle>
+											<cit:date/>
+										</cit:CI_Citation>
+									</mcc:authority>
+									<mcc:code>
+										<gco:CharacterString>101</gco:CharacterString>
+									</mcc:code>
+									<mcc:codeSpace>
+										<gco:CharacterString>https://standards.isotc211.org/19157/-3/1/dqc/content/qualityMeasure/</gco:CharacterString>
+									</mcc:codeSpace>
+								</mcc:MD_Identifier>
+							</mdq:measureIdentification>
+							<mdq:nameOfMeasure>
+								<gco:CharacterString>Data product specification passed</gco:CharacterString>
+							</mdq:nameOfMeasure>
+							<mdq:measureDescription>
+								<gco:CharacterString>Indication that all requirements in the referred data product specification are fulfilled.</gco:CharacterString>
+							</mdq:measureDescription>
+						</mdq:DQ_MeasureReference>
+					</mdq:measure>
+					<mdq:evaluationMethod>
+						<mdq:DQ_FullInspection>
+							<mdq:evaluationMethodDescription>
+								<gco:CharacterString>CEOS WGCV evaluation</gco:CharacterString>
+							</mdq:evaluationMethodDescription>
+							<mdq:evaluationProcedure>
+								<cit:CI_Citation>
+									<cit:title>
+										<gco:CharacterString>CEOS-ARD Normalised Radar Backscatter</gco:CharacterString>
+									</cit:title>
+									<cit:date>
+										<cit:CI_Date>
+											<cit:date>
+												<gco:Date>2021-10-14</gco:Date>
+											</cit:date>
+											<cit:dateType>
+												<cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication"/>
+											</cit:dateType>
+										</cit:CI_Date>
+									</cit:date>
+									<cit:edition>
+										<gco:CharacterString>5.5</gco:CharacterString>
+									</cit:edition>
+									<cit:onlineResource>
+										<cit:CI_OnlineResource>
+											<cit:linkage>
+												<gco:CharacterString>https://ceos.org/ard/files/PFS/NRB/v5.5</gco:CharacterString>
+											</cit:linkage>
+											<cit:name>
+												<gco:CharacterString>Specification</gco:CharacterString>
+											</cit:name>
+											<cit:function>
+												<cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+											</cit:function>
+										</cit:CI_OnlineResource>
+									</cit:onlineResource>
+									<cit:onlineResource>
+										<cit:CI_OnlineResource>
+											<cit:linkage>
+												<gco:CharacterString>https://ceos.org/ard/files/Self%20Assessments/NRB/v5.5/NovaSAR_CSIRO_SelfAssessment.zip</gco:CharacterString>
+											</cit:linkage>
+											<cit:name>
+												<gco:CharacterString>Self assessment</gco:CharacterString>
+											</cit:name>
+											<cit:function>
+												<cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+											</cit:function>
+										</cit:CI_OnlineResource>
+									</cit:onlineResource>
+									<cit:onlineResource>
+										<cit:CI_OnlineResource>
+											<cit:linkage>
+												<gco:CharacterString>https://ceos.org/ard/files/Peer%20Reviews/NRB/v5.5/NovaSAR_WGCVEval.zip</gco:CharacterString>
+											</cit:linkage>
+											<cit:name>
+												<gco:CharacterString>Peer review</gco:CharacterString>
+											</cit:name>
+											<cit:function>
+												<cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+											</cit:function>
+										</cit:CI_OnlineResource>
+									</cit:onlineResource>
+								</cit:CI_Citation>
+							</mdq:evaluationProcedure>
+						</mdq:DQ_FullInspection>
+					</mdq:evaluationMethod>
+					<mdq:result>
+						<mdq:DQ_ConformanceResult>
+							<mdq:specification>
+								<cit:CI_Citation>
+									<cit:title>
+										<gcx:Anchor xlink:href="https://ceos.org/ard/files/PFS/NRB/v5.5">CEOS-ARD Product Family Specification: Normalised Radar Backscatter</gcx:Anchor>
+									</cit:title>
+									<cit:date>
+										<cit:CI_Date>
+											<cit:date>
+												<gco:Date>2021-10-14</gco:Date>
+											</cit:date>
+											<cit:dateType>
+												<cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication"/>
+											</cit:dateType>
+										</cit:CI_Date>
+									</cit:date>
+								</cit:CI_Citation>
+							</mdq:specification>
+							<mdq:explanation>
+								<gco:CharacterString>See the referenced specification</gco:CharacterString>
+							</mdq:explanation>
+							<mdq:pass>
+								<gco:Boolean>true</gco:Boolean>
+							</mdq:pass>
+						</mdq:DQ_ConformanceResult>
+					</mdq:result>
+				</mdq:DQ_ConceptualConsistency>
+			</mdq:report>
+		</mdq:DQ_DataQuality>
+	</mdb:dataQualityInfo>
+```
+
+
+> **Example: 2.3**  
+>  Documenting conformance with specification in ISO19115-3 metadata (with keywords).
+
+```xml
+<mri:descriptiveKeywords>
+	<mri:MD_Keywords>
+		<mri:keyword>
+			<gcx:Anchor xlink:href="https://ceos.org/ard/metadata-codelists/PFS/NRB">Normalised Radar Backscatter</gcx:Anchor>
+		</mri:keyword>
+		<mri:thesaurusName>
+			<cit:CI_Citation>
+				<cit:title>
+					<gcx:Anchor xlink:href="https://ceos.org/ard/metadata-codelists/PFS">CEOS-ARD Product Family Specification</gcx:Anchor>
+				</cit:title>
+				<cit:date/>
+			</cit:CI_Citation>
+		</mri:thesaurusName>
+	</mri:MD_Keywords>
+</mri:descriptiveKeywords>
+```
+
+
 Example files:
-    - [novasar_l2ard_hh_hv](./examples/iso19115-3/novasar_l2ard_hh_hv.xml)
+    - [novasar_l2ard_hh_hv (short)](./examples/iso19115-3/novasar_l2ard_hh_hv_1.xml)
+    - [novasar_l2ard_hh_hv (long)](./examples/iso19115-3/novasar_l2ard_hh_hv_2.xml)
 
 
 ### ISO19115-4 Encoding
@@ -603,23 +786,29 @@ The proposed encoding uses the draft STAC CEOS-ARD Extension {cite}`stac_ceos_ar
   "links": [
     {
       "rel": "ceos-ard-specification",
-      "href": "https://ceos.org/ard/files/PFS/SR/v5.0.1/CEOS-ARD_Product_Family_Specification_Surface_Reflectance-v5.0.1.pdf",
+      "href": "https://ceos.org/ard/files/PFS/SR/v5.0/CARD4L_Product_Family_Specification_Surface_Reflectance-v5.0.pdf",
       "type": "application/pdf",
       "title": "CEOS-ARD Product Family Specification for Surface Reflectance (PDF)"
-    }
+    },
+    {
+      "rel": "ceos-ard-assessment",
+      "href": "https://ceos.org/ard/files/Self%20Assessments/SR/v5.0/Response_Review_comments_EnMAP_CARD4L_Product_Family_Specification_Surface_Reflectance-v5.pdf",
+      "type": "application/pdf",
+      "title": "Peer assessment"
+    },
+
   ],
   "id": "ENMAP_HSI_L2A",
   "stac_extensions": [
-    "https://stac-extensions.github.io/ceos-ard/v0.2.0/schema.json"
+      "https://stac-extensions.github.io/ceos-ard/v0.2.0/schema.json"
   ]
 }
 ```
 
-TBD:
-- add info about additional property:  ceosard:xxxx  similar to "evauation" report ?
+
 
 ```{warning}
-The STAC CEOS-ARD Extension {cite}`stac_ceos_ard` does currently not allow to express that a collection is conformant with more than one CEOS-ARD Product Famility Specification.
+The STAC CEOS-ARD Extension {cite}`stac_ceos_ard` properties `ceosard:specification and specification_version` do currently not allow to express that a collection is conformant with more than one CEOS-ARD Product Famility Specification.
 ```
 
 
@@ -670,6 +859,8 @@ Alternatively, the lightweight approach with controlled keywords can be used.
 Collection metadata records in STAC {cite}`stac` format should advertise conformance status with respect to CEOS-ARD PFS using the STAC CEOS-ARD Extension {cite}`stac_ceos_ard` with reference to the document URI as shown in example 4.1. 
 `````
 
+Example files:
+    - [ENMAP_HSI_L2A](./examples/stac/ENMAP_HSI_L2A.json)
 
 ### DIF10 Encoding
 
@@ -878,7 +1069,6 @@ Collection metadata records in {cite}`OGC_17_084r1` format should advertise conf
 
 
 
+## Traceability
 
-## Taceability
-
-TBD: mapping of proposed requirements to source documents.
+TBD: mapping of proposed requirements to source documents and metadata formats.
