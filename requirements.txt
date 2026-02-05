@@ -1,0 +1,4 @@
+jupyter-book
+playwright
+sphinxcontrib.mermaid
+pandas

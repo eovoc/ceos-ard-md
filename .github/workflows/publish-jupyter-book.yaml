@@ -1,0 +1,79 @@
+name: deploy-book
+
+# Run this when the master or main branch changes
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+      - main
+    # If your git repository has the Jupyter Book within some-subfolder next to
+    # unrelated files, you can make this run only if a file within that specific
+    # folder has been modified.
+    #
+    paths:
+      - book/**
+
+# This job installs dependencies, builds the book, and pushes it to `gh-pages`
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+
+      # Install dependencies
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Install chromium in playwright
+        run: |
+          playwright install --with-deps chromium
+
+      # (optional) Cache your executed notebooks between runs
+      # if you have config:
+      # execute:
+      #   execute_notebooks: cache
+      - name: cache executed notebooks
+        uses: actions/cache@v3
+        with:
+          path: _build/.jupyter_cache
+          key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
+
+      # Build the book
+      # Start with PDF, because the PDF process has a side effect of altering the HTML output
+      - name: Build the PDF book
+        run: |
+          jupyter-book build ./book --builder pdfhtml
+      - name: Build the HTML book
+        run: |
+          jupyter-book build ./book
+
+      # Upload the book's HTML as an artifact
+      #- name: Upload HTML artifact
+      #  uses: actions/upload-pages-artifact@v3
+      #  with:
+      #    path: "book/_build/html"
+
+      - name: Upload PDF and HTML artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-artifacts
+          path: |
+            book/_build/html
+            book/_build/pdf/book.pdf
+
+      # Deploy the book's HTML to GitHub Pages
+      #- name: Deploy to GitHub Pages
+      #  id: deployment
+      #  uses: actions/deploy-pages@v2
