@@ -105,7 +105,6 @@ Data quality section as proposed in the INSPIRE Metadata Technical Guidance {cit
 <gmi:MI_Metadata xmlns:gmi="http://www.isotc211.org/2005/gmi"
                  xmlns:gco="http://www.isotc211.org/2005/gco"
                  xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                 xmlns:gml="http://www.opengis.net/gml/3.2"
                  xmlns:gmx="http://www.isotc211.org/2005/gmx"
                  xmlns:xlink="http://www.w3.org/1999/xlink"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -187,10 +186,51 @@ Collection metadata records in ISO19139(-2) format should advertise conformance 
 
 ### ISO19115-3 Encoding
 
-This section describes best practices for ISO 19115-3 {cite}`iso19115_3` collection metadata encoding.
+This section describes best practices for ISO 19115-3 {cite}`iso19115_3` collection metadata encoding.  It relies on the ISO19157-2 {cite}`iso19157_2` XML schema implementation for Data Quality.
 
 
 > **Example: 2.1**  
+>  Documenting conformance with specification or conformance class in ISO19115-3 metadata (without citation).
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<mdb:MD_Metadata xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
+                 xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+                 xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+                 xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<mdb:dataQualityInfo>
+		<mdq:DQ_DataQuality>
+			<mdq:scope>
+				<mcc:MD_Scope>
+					<mcc:level>
+						<mcc:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_ScopeCode" 
+										  codeListValue="series"/>
+					</mcc:level>
+				</mcc:MD_Scope>
+			</mdq:scope>
+			<mdq:report>
+				<mdq:DQ_DomainConsistency>
+					<mdq:result>
+						<mdq:DQ_ConformanceResult>
+							<mdq:specification xlink:href="https://ceos.org/ard/files/PFS/NRB/v5.5/CARD4L-PFS_NRB_v5.5.pdf"/>
+							<mdq:explanation>
+								<gco:CharacterString>See the referenced specification</gco:CharacterString>
+							</mdq:explanation>
+							<mdq:pass>
+								<gco:Boolean>true</gco:Boolean>
+							</mdq:pass>
+						</mdq:DQ_ConformanceResult>
+					</mdq:result>
+				</mdq:DQ_DomainConsistency>
+			</mdq:report>
+		</mdq:DQ_DataQuality>
+	</mdb:dataQualityInfo>
+</mdb:MD_Metadata>
+```
+
+> **Example: 2.2**  
 >  Documenting conformance with specification or conformance class in ISO19115-3 metadata (with citation).
 
 
@@ -200,10 +240,8 @@ This section describes best practices for ISO 19115-3 {cite}`iso19115_3` collect
                  xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
                  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
                  xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
-                 xmlns:gml="http://www.opengis.net/gml"
                  xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
                  xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
-                 xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
                  xmlns:xlink="http://www.w3.org/1999/xlink"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
@@ -256,12 +294,12 @@ This section describes best practices for ISO 19115-3 {cite}`iso19115_3` collect
 
 `````{admonition} CEOS-ARDMD-REC-2010 [Recommendation]
 :class: tip
-Collection metadata records in ISO19115-3 {cite}`iso19115_3` format should advertise conformance status with respect to CEOS-ARD PFS using a citation element with reference to the document URI or conformance class URI as shown in example 2.1. 
+Collection metadata records in ISO19115-3 {cite}`iso19115_3` format should advertise conformance status with respect to CEOS-ARD PFS using a citation element with reference to the document URI or conformance class URI as shown in example 2.2. 
 `````
 
 
 
-> **Example: 2.2**  
+> **Example: 2.3**  
 >  Documenting conformance with specification in ISO19115-3 metadata with additional information about evaluation method, self assessment, peer review etc.
 
 ```xml
@@ -412,7 +450,7 @@ Collection metadata records in ISO19115-3 {cite}`iso19115_3` format should adver
 ```
 
 
-> **Example: 2.3**  
+> **Example: 2.4**  
 >  Documenting conformance with specification in ISO19115-3 metadata (with keywords).
 
 ```xml
