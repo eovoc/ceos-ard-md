@@ -1,5 +1,4 @@
-# ceos-ard-md
-Guidance to Enable Discoverability of Specialised Datasets
+# Guidance to Enable Discoverability of Specialised Datasets
 
 This GitHub repository is for collaborative use by members of the WGISS DAIG team.
 
