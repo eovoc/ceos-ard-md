@@ -2,7 +2,7 @@
 
 ## Community Approaches
 
-The INSPIRE, DGIWG and Linked Data communities (W3C DCAT) have adopted well-documented approaches for expressing conformance of data products with quality related data product specifications.  These can be applied in the CEOS context to express compliance with CEOS-ARD Product Family Specifications {cite}`CEOS_ARD` or other CEOS Specifications (e.g. Maturity Matrix conformance {cite}`ceos_mm`).
+The INSPIRE, DGIWG and Linked Data communities (W3C DCAT) have adopted well-documented approaches for expressing conformance of data products with quality related data product specifications.  These can be applied in the CEOS context to express compliance with CEOS-ARD Product Family Specifications {cite}`CEOS_ARD` or other CEOS Specifications (e.g. WGISS Data Management and Stewardship Maturity Matrix conformance {cite}`ceos_mm`).
 
 Section 3.1.4 "Data quality info" of the INSPIRE Metadata Technical Guidance {cite}`inspire_metadata_guidance` provides specific 
 guidelines on how to include a statement on the degree of conformity with the specifications against which its conformity has been 
