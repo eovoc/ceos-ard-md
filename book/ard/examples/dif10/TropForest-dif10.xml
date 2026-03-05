@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><DIF xmlns="http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/ https://git.earthdata.nasa.gov/projects/EMFD/repos/dif-schemas/raw/10.x/dif_v10.2.xsd">
+<Entry_ID>
+<Short_Name>TropForest</Short_Name>
+<Version>11.0</Version>
+</Entry_ID>
+<Entry_Title>TropForest- ALOS, GEOSAT-1 &amp; KOMPSAT-2 optical coverages over tropical forests</Entry_Title>
+<Dataset_Citation>
+<Persistent_Identifier>
+<Type>DOI</Type>
+<Identifier>10.5270/esa-qoe849q</Identifier>
+</Persistent_Identifier>
+</Dataset_Citation>
+<Science_Keywords>
+<Category>EARTH SCIENCE</Category>
+<Topic>BIOSPHERE</Topic>
+<Term>ECOSYSTEMS</Term>
+<Variable_Level_1>TERRESTRIAL ECOSYSTEMS</Variable_Level_1>
+<Variable_Level_2>FORESTS</Variable_Level_2>
+</Science_Keywords>
+<Science_Keywords>
+<Category>EARTH SCIENCE</Category>
+<Topic>BIOSPHERE</Topic>
+<Term>VEGETATION</Term>
+</Science_Keywords>
+<ISO_Topic_Category>IMAGERY/BASE MAPS/EARTH COVER</ISO_Topic_Category>
+<Platform>
+<Type>Earth Observation Satellites</Type>
+<Short_Name>ALOS</Short_Name>
+<Long_Name>Advanced Land Observing Satellite</Long_Name>
+<Instrument>
+<Short_Name>AVNIR-2</Short_Name>
+<Long_Name>Advanced Visible and Near-Infrared Radiometer Type 2</Long_Name>
+</Instrument>
+</Platform>
+<Platform>
+<Type>Earth Observation Satellites</Type>
+<Short_Name>Deimos-1</Short_Name>
+<Long_Name>Deimos-1 Microsatellite Mission</Long_Name>
+<Instrument>
+<Short_Name>SLIM-6</Short_Name>
+<Long_Name>SLIM-6 Imager</Long_Name>
+</Instrument>
+</Platform>
+<Platform>
+<Type>Earth Observation Satellites</Type>
+<Short_Name>KOMPSAT-2</Short_Name>
+<Long_Name>Korea Multi-Purpose Satellite - 2</Long_Name>
+<Instrument>
+<Short_Name>MSC</Short_Name>
+<Long_Name>Multi-Spectral Camera</Long_Name>
+</Instrument>
+</Platform>
+<Temporal_Coverage>
+<Range_DateTime>
+<Beginning_Date_Time>2009-01-27T00:00:00.000Z</Beginning_Date_Time>
+<Ending_Date_Time>2011-08-09T00:00:00.000Z</Ending_Date_Time>
+</Range_DateTime>
+</Temporal_Coverage>
+<Dataset_Progress>COMPLETE</Dataset_Progress>
+<Spatial_Coverage>
+<Granule_Spatial_Representation>NO_SPATIAL</Granule_Spatial_Representation>
+<Geometry>
+<Coordinate_System>CARTESIAN</Coordinate_System>
+<Bounding_Rectangle>
+<Southernmost_Latitude>-50.00</Southernmost_Latitude>
+<Northernmost_Latitude>40.00</Northernmost_Latitude>
+<Westernmost_Longitude>-100.00</Westernmost_Longitude>
+<Easternmost_Longitude>160.00</Easternmost_Longitude>
+</Bounding_Rectangle>
+</Geometry>
+</Spatial_Coverage>
+<Project>
+<Short_Name>FedEO</Short_Name>
+<Long_Name>FedEO: Federated EO Gateway</Long_Name>
+</Project>
+<Use_Constraints>
+<License_URL>
+<URL>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a</URL>
+<Title>Other Constraints</Title>
+</License_URL>
+</Use_Constraints>
+<Organization>
+<Organization_Type>DISTRIBUTOR</Organization_Type>
+<Organization_Name>
+<Short_Name>ESA/ESRIN</Short_Name>
+<Long_Name>ESRIN Earth Observation, European Space Agency</Long_Name>
+</Organization_Name>
+<Organization_URL>http://www.esa.int</Organization_URL>
+<Personnel>
+<Role>DATA CENTER CONTACT</Role>
+<Contact_Group>
+<Name>ESRIN Earth Observation Help Desk</Name>
+<Address>
+<Street_Address>Largo Galileo Galilei 1</Street_Address>
+<City>Frascati (Roma)</City>
+<Postal_Code>00044</Postal_Code>
+<Country>Italy</Country>
+</Address>
+<Email>eohelp@esa.int</Email>
+</Contact_Group>
+</Personnel>
+</Organization>
+<Organization>
+<Organization_Type>ORIGINATOR</Organization_Type>
+<Organization_Name>
+<Short_Name>ESA/ESRIN</Short_Name>
+<Long_Name>ESRIN Earth Observation, European Space Agency</Long_Name>
+</Organization_Name>
+<Organization_URL>http://www.esa.int</Organization_URL>
+<Personnel>
+<Role>DATA CENTER CONTACT</Role>
+<Contact_Group>
+<Name>Earth Observation helpdesk</Name>
+<Address>
+<Street_Address>Largo Galileo Galilei 1</Street_Address>
+<City>Frascati (Roma)</City>
+<Postal_Code>00044</Postal_Code>
+<Country>Italy</Country>
+</Address>
+<Email>eohelp@esa.int</Email>
+</Contact_Group>
+</Personnel>
+</Organization>
+<Summary>
+<Abstract>The objective of the ESA TropForest project was to create a harmonised geo-database of ready-to-use satellite imagery to support 2010 global forest assessment performed by the Joint Research Centre (JRC) of the European Commission and by the Food and Agriculture Organization (FAO). Assessments for year 2010 were essential for building realistic deforestation benchmark rates at global to regional levels. To reach this objective, the project aimed to create a harmonised ortho-rectified/pre-processed imagery geo-database based on satellite data acquisitions (ALOS AVNIR-2, GEOSAT-1 SLIM6, KOMPSAT-2 MSC) performed during year 2009 and 2010, for the Tropical Latin America (excluding Mexico) and for the Tropical South and Southeast Asia (excluding China), resulting in 1971 sites located at 1 deg x 1 deg geographical lat/long intersections. The project finally delivered 1866 sites (94.7% of target) due to cloud coverages too high for missing sites</Abstract>
+</Summary>
+<Related_URL>
+<URL_Content_Type>
+<Type>GET DATA</Type>
+</URL_Content_Type>
+<URL>https://fedeo-client.ceos.org?uid=TropForest</URL>
+<Description>DescribedBy</Description>
+<Mime_Type>text/html</Mime_Type>
+</Related_URL>
+<Related_URL>
+<URL_Content_Type>
+<Type>GET DATA</Type>
+</URL_Content_Type>
+<URL>https://fedeo.ceos.org/collections/series/items/TropForest?httpAccept=application/vnd.iso.19139-2%2Bxml</URL>
+<Description>DescribedBy</Description>
+<Mime_Type>application/x-vnd.iso.19139-2+xml</Mime_Type>
+</Related_URL>
+<Related_URL>
+<URL_Content_Type>
+<Type>DATA SET LANDING PAGE</Type>
+</URL_Content_Type>
+<URL>https://doi.org/10.5270/esa-qoe849q</URL>
+<Description>Landing Page</Description>
+</Related_URL>
+<Related_URL>
+<URL_Content_Type>
+<Type>GET CAPABILITIES</Type>
+<Subtype>OpenSearch</Subtype>
+</URL_Content_Type>
+<URL>https://fedeo.ceos.org/collections/series/items/TropForest/api</URL>
+<Description>tag_key: opensearch.granule.osdd</Description>
+<Mime_Type>application/opensearchdescription+xml</Mime_Type>
+</Related_URL>
+<Metadata_Name>CEOS IDN DIF</Metadata_Name>
+<Metadata_Version>VERSION 10.2</Metadata_Version>
+<Metadata_Dates>
+<Metadata_Creation>unknown</Metadata_Creation>
+<Metadata_Last_Revision>2026-02-25T11:31:09</Metadata_Last_Revision>
+<Data_Creation>2019-05-23</Data_Creation>
+<Data_Last_Revision>unknown</Data_Last_Revision>
+</Metadata_Dates>
+<Product_Level_Id>1</Product_Level_Id>
+<Extended_Metadata>
+<Metadata>
+<Group>int.esa.fedeo</Group>
+<Name>ESA Thesaurus</Name>
+<Value>Agriculture</Value>
+<Value>Forestry</Value>
+<Value>Land Surface</Value>
+<Value>Vegetation</Value>
+</Metadata>
+</Extended_Metadata>
+</DIF>

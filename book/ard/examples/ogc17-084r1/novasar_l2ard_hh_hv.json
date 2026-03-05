@@ -1,0 +1,97 @@
+{
+  "geometry": {
+    "coordinates": [[
+      [
+        -62.87262834116111,
+        -55.94470669421993
+      ],
+      [
+        173.246741777445,
+        -55.94470669421993
+      ],
+      [
+        173.246741777445,
+        38.42053289934906
+      ],
+      [
+        -62.87262834116111,
+        38.42053289934906
+      ],
+      [
+        -62.87262834116111,
+        -55.94470669421993
+      ]
+    ]],
+    "type": "Polygon"
+  },
+  "id": "https://fedeo.ceos.org/collections/novasar_l2ard_hh_hv?mode=owc",
+  "type": "Feature",
+  "properties": {
+    "date": "2019-11-02T02:32:55.000Z/2025-10-08T12:05:22.999Z",
+    "identifier": "novasar_l2ard_hh_hv",
+    "wasUsedBy": [{
+      "generated": {
+        "degree": "http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant",
+        "description": "See the referenced specification",
+        "type": "Entity"
+      },
+      "qualifiedAssociation": {
+        "hadPlan": {
+          "wasDerivedFrom": {
+            "type": "Standard",
+            "issued": "2021-10-14T00:00:00.00Z"
+          },
+          "type": "Plan"
+        },
+        "type": "Association"
+      },
+      "type": "Activity"
+    }],
+    "contactPoint": [{
+      "hasAddress": {
+        "postal-code": "ACT 2601",
+        "street-address": "Building 101, Clunies Ross Street",
+        "locality": "Black Mountain",
+        "country-name": "Australia"
+      },
+      "phone": "tel:tel:+61395452176",
+      "name": "CSIRO",
+      "type": "Organization",
+      "uri": "www.csiro.au"
+    }],
+    "kind": "http://purl.org/dc/dcmitype/Collection",
+    "created": "2025-10-20T00:00:00.000Z",
+    "abstract": {"text/plain": "NovaSAR-1 CEOS-ARD (level 2) HH,HV polarizations"},
+    "title": "novasar_l2ard_hh_hv",
+    "provenance": [{
+      "label": "No info available.",
+      "type": "ProvenanceStatement"
+    }],
+    "links": {
+      "previews": [{
+        "href": "https://eo-data.csiro.au/projects/easi-thumbnails/novasar_l2ard_hh_hv/2019/11/CEOS-ARD_NRB_v5_5_NovaSAR_01_7940_scd_29_191102_023255_HH_HV_A_R-ql.png",
+        "title": "graphic overview",
+        "type": "image/png"
+      }],
+      "alternates": [
+      ]
+    },
+    "categories": [{
+      "scheme": "https://ceos.org/ard/metadata-codelists/PFS",
+      "term": "https://ceos.org/ard/metadata-codelists/PFS/NRB",
+      "label": "Normalised Radar Backscatter"
+    }],
+    "isPrimaryTopicOf": {
+      "created": "2025-10-20T00:00:00.00Z",
+      "conformsTo": {
+        "versionInfo": "2005/Cor.1:2006",
+        "type": "Standard",
+        "title": "ISO19115"
+      },
+      "type": "CatalogRecord",
+      "lang": "en",
+      "updated": "2025-10-20T00:00:00.00Z"
+    },
+    "updated": "2025-10-20T00:00:00.000Z"
+  }
+}
