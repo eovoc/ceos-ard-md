@@ -6,7 +6,7 @@ root: preface
 parts:
   - caption: CEOS-ARD Discovery Guide
     chapters:
-    - file: introduction
-    - file: objectives
-    - file: best_practices
+    - file: ard/introduction
+    - file: ard/objectives
+    - file: ard/best_practices
     - file: references
