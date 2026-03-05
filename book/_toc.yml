@@ -8,5 +8,6 @@ parts:
     chapters:
     - file: ard/introduction
     - file: ard/objectives
+    - file: ard/prerequisites
     - file: ard/best_practices
     - file: references
