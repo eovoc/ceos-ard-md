@@ -30,7 +30,7 @@ is recommended to include information on the conformance with the individual con
 `````
 This approach is recommended by {cite}`inspire_dataspec_oi`.
 
-Alternatively, or in addition, a simple keyword-based identification of EOS-ARD Product Families can be adoped as well, using codelist and codelist values. This approach is described as well.
+Alternatively, or in addition, a simple keyword-based identification of CEOS-ARD Product Families can be adoped as well, using codelist and codelist values. This approach is described as well.
 
 
 ## Metadata Encoding
@@ -107,7 +107,6 @@ Data quality section as proposed in the INSPIRE Metadata Technical Guidance {cit
                  xmlns:gmd="http://www.isotc211.org/2005/gmd"
                  xmlns:gml="http://www.opengis.net/gml/3.2"
                  xmlns:gmx="http://www.isotc211.org/2005/gmx"
-                 xmlns:srv="http://www.isotc211.org/2005/srv"
                  xmlns:xlink="http://www.w3.org/1999/xlink"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:schemaLocation="http://www.isotc211.org/2005/gmi ./gmi/gmi.xsd">
@@ -195,37 +194,16 @@ This section describes best practices for ISO 19115-3 {cite}`iso19115_3` collect
 >  Documenting conformance with specification or conformance class in ISO19115-3 metadata (with citation).
 
 
-TBD:
-- remove unnecessary namespaces.
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <mdb:MD_Metadata xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
-                 xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
                  xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
                  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
                  xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
-                 xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
                  xmlns:gml="http://www.opengis.net/gml"
-                 xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
-                 xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/1.0"
-                 xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0"
                  xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
-                 xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
-                 xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0"
                  xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
-                 xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/1.0"
-                 xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/1.0"
-                 xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0"
-                 xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0"
-                 xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0"
-                 xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/1.0"
-                 xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0"
                  xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
-                 xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/1.0"
-                 xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
-                 xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/1.0"
-                 xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0"
                  xmlns:xlink="http://www.w3.org/1999/xlink"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
@@ -278,7 +256,7 @@ TBD:
 
 `````{admonition} CEOS-ARDMD-REC-2010 [Recommendation]
 :class: tip
-Collection metadata records in ISO19115-3 {cite}`iso19115_3` format should advertise conformance status with respect to CEOS-ARD PFS using a citation element with reference to the document URI or conformance class URI as shown in example 1.2. 
+Collection metadata records in ISO19115-3 {cite}`iso19115_3` format should advertise conformance status with respect to CEOS-ARD PFS using a citation element with reference to the document URI or conformance class URI as shown in example 2.1. 
 `````
 
 
@@ -345,7 +323,8 @@ Collection metadata records in ISO19115-3 {cite}`iso19115_3` format should adver
 												<gco:Date>2021-10-14</gco:Date>
 											</cit:date>
 											<cit:dateType>
-												<cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication"/>
+												<cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" 
+																	 codeListValue="publication"/>
 											</cit:dateType>
 										</cit:CI_Date>
 									</cit:date>
@@ -361,7 +340,8 @@ Collection metadata records in ISO19115-3 {cite}`iso19115_3` format should adver
 												<gco:CharacterString>Specification</gco:CharacterString>
 											</cit:name>
 											<cit:function>
-												<cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+												<cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode" 
+																		   codeListValue="information"/>
 											</cit:function>
 										</cit:CI_OnlineResource>
 									</cit:onlineResource>
@@ -374,7 +354,8 @@ Collection metadata records in ISO19115-3 {cite}`iso19115_3` format should adver
 												<gco:CharacterString>Self assessment</gco:CharacterString>
 											</cit:name>
 											<cit:function>
-												<cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+												<cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode" 
+																		   codeListValue="information"/>
 											</cit:function>
 										</cit:CI_OnlineResource>
 									</cit:onlineResource>
@@ -387,7 +368,8 @@ Collection metadata records in ISO19115-3 {cite}`iso19115_3` format should adver
 												<gco:CharacterString>Peer review</gco:CharacterString>
 											</cit:name>
 											<cit:function>
-												<cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+												<cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode" 
+																		   codeListValue="information"/>
 											</cit:function>
 										</cit:CI_OnlineResource>
 									</cit:onlineResource>
@@ -408,7 +390,8 @@ Collection metadata records in ISO19115-3 {cite}`iso19115_3` format should adver
 												<gco:Date>2021-10-14</gco:Date>
 											</cit:date>
 											<cit:dateType>
-												<cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication"/>
+												<cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" 
+																	 codeListValue="publication"/>
 											</cit:dateType>
 										</cit:CI_Date>
 									</cit:date>
@@ -595,6 +578,39 @@ This section describes best practices for ISO 19115-4 {cite}`iso19115_4` collect
 Collection metadata records in ISO19115-4 {cite}`iso19115_4` format should advertise conformance status with respect to CEOS-ARD PFS using a citation element with reference to the document URI or conformance class URI as shown in example 3.1. 
 `````
 
+> **Example: 3.3**  
+>  Documenting conformance with specification in ISO19115-4 metadata (with keywords).
+
+```json
+{
+	"identificationInfo": {
+    	"defaultLocale": {
+        	"language": "eng",
+    		"characterEncoding": "utf8"
+        },
+        "extent": [{"geographicElement": [{
+        	"northBoundLatitude": 38.42053289934906,
+            "southBoundLatitude": -55.94470669421993,
+            "type": "EX_GeographicBoundingBox",
+            "westBoundLongitude": -62.87262834116111,
+            "eastBoundLongitude": 173.246741777445
+        }]}],
+        "descriptiveKeywords": [{
+            "thesaurusName": {
+				"title": "CEOS-ARD Product Family Specification"
+			},
+            "keyword": ["Normalised Radar Backscatter"]
+        }],
+        "citation": {
+            "date": {"creation": "2025-10-20"},
+            "title": "novasar_l2ard_hh_hv"
+        },
+        "abstract": "NovaSAR-1 CEOS-ARD (level 2) HH,HV polarizations"
+    }	
+}
+```
+
+
 Example files:
     - [novasar_l2ard_hh_hv.json](./examples/iso19115-4/novasar_l2ard_hh_hv.json)
 
@@ -703,8 +719,6 @@ Example files:
 
 This section describes best practices for DIF10 {cite}`dif10` collection metadata encoding.
 
-TBD
-
 > **Example: 5.1**  
 >  Documenting conformance with specification or conformance class in DIF10 {cite}`dif10` metadata.
 
@@ -746,6 +760,11 @@ TBD
 >  Documenting conformance with specification or conformance class in UMM-JSON metadata.
 
 
+> **Example: 6.3**  
+>  Documenting conformance with specification in UMM-JSON {cite}`umm_json` metadata (with keywords).
+
+
+
 ### GeoDCAT-AP Encoding
 
 This section describes best practices for GeoDCAT-AP {cite}`geodcat_ap` collection metadata encoding based on DCAT {cite}`dcat_v3`.
@@ -774,7 +793,7 @@ Additional information is available at:
 			<dct:Standard rdf:about="https://ceos.org/ard/files/PFS/NRB/v5.5">
 				<dct:title>CEOS-ARD Product Family Specification: Normalised Radar Backscatter</dct:title>
 				<dct:identifier>https://ceos.org/ard/files/PFS/NRB/v5.5</dct:identifier>
-                <dct:hasVersion>5.5</dct:hasVersion>
+				<dct:hasVersion>5.5</dct:hasVersion>
 				<rdfs:seeAlso rdf:resource="https://ceos.org/ard/files/PFS/NRB/v5.5/CARD4L-PFS_NRB_v5.5.pdf"/>
 			</dct:Standard>
 		</dct:conformsTo>
@@ -902,6 +921,27 @@ The same example in Turtle is shown below.
   dc:publisher <http://dbpedia.org/resource/Committee_on_Earth_Observation_Satellites> .
 ```
 
+
+> **Example: 7.4**  
+>  Documenting conformance with specification in GeoDCAT-AP {cite}`geodcat_ap` metadata (with keywords).
+
+```json
+{
+	"@context": {},
+	"@type": "dcat:Dataset",
+  	"dct:type": "http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series",
+  	"dct:identifier": "novasar_l2ard_hh_hv",	
+    "dct:description": "NovaSAR-1 CEOS-ARD (level 2) HH,HV polarizations",
+  	"dcat:theme": [{
+    	"skos:prefLabel": "Normalised Radar Backscatter",
+    	"@type": "skos:Concept",
+    	"@id": "https://ceos.org/ard/metadata-codelists/PFS/NRB",
+    	"skos:inScheme": "https://ceos.org/ard/metadata-codelists/PFS"
+  	}],
+  	"@id": "https://emc.spacebel.be/collections/novasar_l2ard_hh_hv",
+  	"dct:title": "novasar_l2ard_hh_hv"
+}
+```
 
 
 `````{admonition} CEOS-ARDMD-REC-7010 [Recommendation]
